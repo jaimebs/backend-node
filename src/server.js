@@ -10,7 +10,7 @@ const app = express()
 app.use(cors())
 // Desativa o X-Powered-By: Express
 app.disable('x-powered-by')
-
+app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 app.use(router)
