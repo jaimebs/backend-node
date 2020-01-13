@@ -4,7 +4,8 @@
   "description": "Backend made with Node.js + Express + ES6 + ESLint + Prettier + Sucrase.",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec sucrase-node ./src/server.js"
+    "dev": "nodemon --exec sucrase-node ./src/server.js",
+    "build": "sucrase ./src -d ./dist --transforms imports"
   },
   "keywords": [],
   "author": "Jaime Barbosa",
