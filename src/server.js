@@ -2,7 +2,7 @@ import 'dotenv/config';
 import cors from 'cors';
 import express from 'express';
 
-import router from './router';
+import routes from './routes';
 
 const app = express();
 
@@ -13,6 +13,6 @@ app.disable('x-powered-by');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(router);
+app.use(routes);
 
 app.listen(process.env.PORT || 3000, () => console.log(`Listening on port: ${process.env.PORT}`));
