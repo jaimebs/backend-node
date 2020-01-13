@@ -1,18 +1,18 @@
-import 'dotenv/config'
-import cors from 'cors'
-import express from 'express'
+import 'dotenv/config';
+import cors from 'cors';
+import express from 'express';
 
-import router from './router'
+import router from './router';
 
-const app = express()
+const app = express();
 
 // Permite acesso externo
-app.use(cors())
+app.use(cors());
 // Desativa o X-Powered-By: Express
-app.disable('x-powered-by')
-app.use(express.urlencoded({ extended: true }))
-app.use(express.json())
+app.disable('x-powered-by');
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-app.use(router)
+app.use(router);
 
-app.listen(process.env.PORT || 3000, () => console.log(`Listening on port: ${process.env.PORT}`))
+app.listen(process.env.PORT || 3000, () => console.log(`Listening on port: ${process.env.PORT}`));
